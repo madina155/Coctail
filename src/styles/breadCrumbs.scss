@@ -1,0 +1,24 @@
+.breadCrumbs{
+  display: flex;
+  column-gap: 1px;
+  &__item{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #7D7D7D;
+    //position: relative;
+    //&:not(&:first-child)::before {
+    //  content: '';
+    //  position: absolute;
+    //  width: 4px;
+    //  height: 4px;
+    //  left: -10px;
+    //  top: 50%;
+    //  border-radius: 50%;
+    //  background: #0F303F;
+    //}
+  }
+}

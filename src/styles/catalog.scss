@@ -1,0 +1,147 @@
+.catalog{
+  padding-bottom: 45px;
+  &__box{
+    display: flex;
+    column-gap: 60px;
+  }
+  &__title{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 87.3%;
+    color: #121212;
+    padding: 60px 0;
+  }
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+  }
+  &__col{
+
+
+  }
+  &__price-scroll{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__scroll-line{
+    height: 1px;
+    width: 138px;
+    background: #514A7E;
+
+  }
+  &__filter{
+    margin-top: 30px;
+    &-box {
+      border: none;
+      outline: none;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #121212;
+    }
+    &-item{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: #7D7D7D;
+
+    }
+  }
+
+
+  &__right{
+    width: 11%;
+    &-price{
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      color: #121212;
+      margin-bottom: 20px;
+    }
+  }
+  &__after, &__before{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    color: #7D7D7D;
+    margin-bottom: 4px;
+  }
+  &__left{
+    width: 85%;
+
+  }
+  &__line{
+    width: 178px;
+    border: 0.5px solid #7D7D7D;
+    margin-bottom: 15px;
+  }
+  &__price{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #121212;
+  }
+  &__btm-right, &__btm-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__btm-left{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    padding: 13px 0;
+    color: #7D7D7D;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding-bottom: 15px;
+
+  }
+  &__icons{
+    display: flex;
+    column-gap: 17px;
+    align-items: center;
+  }
+
+  &__btn{
+    border: 0.5px solid #514A7E;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 14px 18px 14px 25px;
+    color: #514A7E;
+    display: flex;
+    align-items: center;
+    &-svg{
+      margin-left: 9px;
+    }
+  }
+  &__img{
+    width: 298px;
+    height: 339px;
+    overflow: hidden;
+  }
+}

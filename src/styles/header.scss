@@ -1,0 +1,39 @@
+.header{
+  padding: 50px 0;
+  background: #FFFDF5;
+
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+  &__search{
+    display: flex;
+    align-items: center;
+    &-field{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-size: 12px;
+      line-height: 14px;
+      outline: none;
+      border: none;
+      border-bottom: #7D7D7D 1px solid;
+      width: 308px;
+      padding-bottom: 4px;
+    }
+    &-icon{
+      padding-right: 20px;
+
+    }
+  }
+  &__icons{
+    display: flex;
+    column-gap: 17px;
+  }
+
+}

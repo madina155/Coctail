@@ -1,0 +1,61 @@
+.review{
+  padding-bottom: 150px;
+
+  .review__title{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    color: #121212;
+    padding-bottom: 60px;
+
+
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+
+  }
+  &__card{
+    //width: calc(33.33333% - 10px);
+    background: #FFFDF5;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 54px 29px 40px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  &__text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    color: #7D7D7D;
+    padding: 14px 0 12px;
+  }
+  &__btm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__name{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #121212;
+  }
+
+  &__data{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    color: #514A7E;
+  }
+
+}

@@ -1,0 +1,16 @@
+.invite{
+  padding-bottom: 150px;
+  &__row{
+    display: flex;
+
+  }
+  &__col-big{
+    width: 75%;
+    background: #514A7E;
+  }
+  &__box{
+    margin: 40px 122px 39px 135px;
+    background: #FFFDF5;
+
+  }
+}

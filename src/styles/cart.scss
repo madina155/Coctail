@@ -1,0 +1,29 @@
+.cart{
+  padding: 0 0 119px;
+
+
+  &__back{
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+
+    &-link{
+      padding: 19px 14px;
+
+      border-radius: 50%;
+      background: #514A7E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__title{
+    display: flex;
+    padding: 0 12px 0 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #121212;
+
+  }
+}

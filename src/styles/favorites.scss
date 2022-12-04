@@ -1,0 +1,102 @@
+.favorites{
+  padding-bottom: 66px;
+  &__title{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    color: #121212;
+    padding-bottom: 60px;
+
+  }
+  &__cart{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+
+    color: #121212;
+  }
+  &__box{
+    display: flex;
+  }
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+  }
+  &__col{
+    width: calc(33.33333% - 65px);
+
+  }
+  &__right{
+    width: 15%;
+    display: flex;
+  }
+  &__left{
+    width: 85%;
+
+  }
+  &__line{
+    width: 178px;
+    border: 0.5px solid #7D7D7D;
+    margin-bottom: 15px;
+  }
+  &__price{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #121212;
+  }
+  &__btm-right, &__btm-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__btm-left{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    padding: 13px 0;
+    color: #7D7D7D;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding-bottom: 15px;
+
+  }
+  &__icons{
+    display: flex;
+    column-gap: 17px;
+    align-items: center;
+  }
+
+  &__btn{
+    border: 0.5px solid #514A7E;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 14px 18px 14px 25px;
+    color: #514A7E;
+    display: flex;
+    align-items: center;
+    &-svg{
+      margin-left: 9px;
+    }
+  }
+}
