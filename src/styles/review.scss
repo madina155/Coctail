@@ -1,6 +1,11 @@
 .review{
   padding-bottom: 150px;
-
+  position: relative;
+  .circle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   .review__title{
     font-family: 'Roboto', sans-serif;
     font-style: normal;

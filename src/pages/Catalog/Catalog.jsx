@@ -14,7 +14,7 @@ const Catalog = () => {
 
     useEffect(() => {
         dispatch(getProducts())
-    }, [filter])
+    }, [])
 
 
     return (
@@ -47,7 +47,9 @@ const Catalog = () => {
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831" alt=""/>
                                 : status === 'resolve' ?
                                 <div className="catalog__row">
-                                    {data.map((item) => (
+                                    { data.filter((item) => {
+                                        return filter.size ? item.sizes.find((el) => +el.size == +filter.size ).inStock : item
+                                    }).map((item) => (
                                         <div className="catalog__box">
                                             <CatalogRow item={item}/>
                                         </div>

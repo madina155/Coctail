@@ -22,9 +22,9 @@ const Welcome = () => {
                         <div className="welcome__col-img-left">
                             <img src={welcomeImgTwo} alt="" className="welcome__col-img2"/>
                         </div>
-                        <div className="welcome__col-img-right">
-                            <img src={jeans5} alt="" className="welcome__col-img4"/>
-                        </div>
+                        {/*<div className="welcome__col-img-right">*/}
+                        {/*    <img src={jeans5} alt="" className="welcome__col-img4"/>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
                 <div className="welcome__catalog">

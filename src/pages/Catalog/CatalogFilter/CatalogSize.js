@@ -26,10 +26,9 @@ const CatalogSize = () => {
                         onChange={(e) => setSizesState(e.target.value)}
                 >
                     <MenuItem className="catalog__filter-item" value="">По умолчанию</MenuItem>
-                    <MenuItem className="catalog__filter-item" value={36}>36</MenuItem>
                     <MenuItem className="catalog__filter-item" value={38}>38</MenuItem>
                     <MenuItem className="catalog__filter-item" value={39}>39</MenuItem>
-                    <MenuItem className="catalog__filter-item" value={40}>41</MenuItem>
+                    <MenuItem className="catalog__filter-item" value={41}>41</MenuItem>
                     <MenuItem className="catalog__filter-item" value={42}>42</MenuItem>
                 </Select>
             </FormControl>

@@ -1,0 +1,42 @@
+.shopping {
+  padding: 30px 30px;
+  position: relative;
+  &__col{
+    margin-top: 60px;
+
+    width: calc(33.3333% - 15px);
+  }
+  &__title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 87.3%;
+    color: #121212;
+  }
+  &__link{
+    font-family: 'Bad Script', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    padding-left: 265px;
+    color: #514A7E;
+  }
+}
+
+
+
+.shopping .swiper-button-prev:after {
+  color: #a5a1b2;
+}
+
+.shopping .swiper-button-prev:hover::after {
+  color: #ffffff;
+}
+
+.shopping .swiper-button-next:after {
+  color: #a5a1b2;
+}
+
+.shopping .swiper-button-next:hover::after {
+  color: #ffffff;
+}

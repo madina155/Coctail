@@ -15,12 +15,12 @@ const Footer = () => {
                         <ul className="footer__ul">
                             <Link to={''} className="footer__item">Главная</Link>
                             <li className="footer__item">Акции</li>
-                            <Link to={Catalog} className="footer__item">Каталог</Link>
-                            <li className="footer__item">Возврат</li>
+                            <Link to={'catalog'} className="footer__item">Каталог</Link>
+                            <Link to={'questions'} className="footer__item">Возврат</Link>
                             <li className="footer__item">Доставка</li>
                             <li className="footer__item">Партнёрам</li>
-                            <li className="footer__item">Способы оплаты</li>
-                            <Link to={Questions} className="footer__item">Как сделать заказ?</Link>
+                            <Link to={'questions'} className="footer__item">Способы оплаты</Link>
+                            <Link to={'questions'} className="footer__item">Как сделать заказ?</Link>
 
                         </ul>
                     </div>
@@ -28,7 +28,7 @@ const Footer = () => {
                     <div className="footer__col">
                         <p className="footer__title">Мой кабинет</p>
                         <ul className="footer__ul">
-                            <Link to={Cart} className="footer__item">Мои заказы</Link>
+                            <Link to={'cart'} className="footer__item">Мои заказы</Link>
                             <li className="footer__item">Мои адреса</li>
                             <li className="footer__item">Мои скидки</li>
                             <li className="footer__item">Моя информация</li>

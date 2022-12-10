@@ -27,6 +27,13 @@
     margin-bottom: 150px;
 
   }
+  &__images{
+    width: 131px;
+    &:first-child{
+      display: none;
+    }
+  }
+
   &__card{
     width: 50%;
   }

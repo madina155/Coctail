@@ -1,6 +1,4 @@
 import React, {useContext, useEffect, useState} from 'react';
-import productImg from "../../assets/blouse01.png"
-import productImg2 from "../../assets/blouse01-2.png"
 import {useParams} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux";
 import {getOneProduct} from "../../redux/reducers/oneProduct";
@@ -8,6 +6,8 @@ import {setFavoritesProduct, removeFavoritesProduct, setCartProduct, removeCartP
 import {CustomContext} from "../../utils/context";
 import {store} from "../../redux";
 import Review from "../Home/Review/Review";
+import {addCart} from "../../redux/reducers/cart";
+import {Link} from "react-router-dom"
 
 const Product = () => {
         const dispatch = useDispatch()
@@ -34,15 +34,11 @@ const Product = () => {
             }
         }
 
-        // const handSelected = () => {
-        //     if (selected) {
-        //         dispatch(removeCartProduct(product.id))
-        //         setSelected(false)
-        //     } else {
-        //         dispatch(setCartProduct(product.id))
-        //         setSelected(true)
-        //     }
-        // }
+
+
+    if (status === 'loading') {
+        return '...loading'
+    }
 
         return (
             <section className="product">
@@ -53,11 +49,14 @@ const Product = () => {
                     </div>
                     <div className="product__row">
                         <div className="product__card">
-                            <img className="product__img" src={productImg} alt=""/>
+                            <img className="product__img" src={product.img && product.img[0]} alt=""/>
                             <div className="product__photos">
-                                <img src={productImg2} alt=""/>
-                                <img src={productImg2} alt=""/>
-                                <img src={productImg2} alt=""/>
+                                {
+                                    product.img && product.img.map((item) => (
+                                        <img className="product__images" src={item} alt=""/>
+                                    ))
+                                }
+
                             </div>
                         </div>
                         <div className="product__card">
@@ -81,17 +80,19 @@ const Product = () => {
                                     <p className="product__btn-size">48</p>
                                 </button>
                             </div>
-                            <a className="product__link" href="">Таблица размеров</a>
+                            <Link to={'table'} className="product__link" href="">Таблица размеров</Link>
                             <div className="product__btns">
-                                <button className="product__btns-cart">В корзину
+                                <button className="product__btns-cart" onClick={() => dispatch(addCart(product
+
+                                )) }>В корзину
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M13.8893 6.66645V5.02756C13.8893 4.51686 13.7887 4.01117 13.5933 3.53935C13.3979 3.06753 13.1114 2.63882 12.7503 2.2777C12.3892 1.91658 11.9605 1.63013 11.4886 1.4347C11.0168 1.23926 10.5111 1.13867 10.0004 1.13867C9.48974 1.13867 8.98404 1.23926 8.51222 1.4347C8.0404 1.63013 7.61169 1.91658 7.25057 2.2777C6.88946 2.63882 6.603 3.06753 6.40757 3.53935C6.21213 4.01117 6.11154 4.51686 6.11154 5.02756V8.91645C6.11154 9.06379 6.17008 9.2051 6.27426 9.30929C6.37845 9.41347 6.51976 9.472 6.6671 9.472C6.81444 9.472 6.95575 9.41347 7.05994 9.30929C7.16412 9.2051 7.22266 9.06379 7.22266 8.91645V7.77756H11.6671V6.66645H7.22266V5.02756C7.22266 4.29085 7.51531 3.58431 8.03625 3.06338C8.55718 2.54244 9.26372 2.24978 10.0004 2.24978C10.7371 2.24978 11.4437 2.54244 11.9646 3.06338C12.4856 3.58431 12.7782 4.29085 12.7782 5.02756V8.88867C12.7782 9.03601 12.8367 9.17732 12.9409 9.28151C13.0451 9.3857 13.1864 9.44423 13.3338 9.44423C13.4811 9.44423 13.6224 9.3857 13.7266 9.28151C13.8308 9.17732 13.8893 9.03601 13.8893 8.88867V7.77756H16.6671V17.7776H3.33377V7.77756H5.00043V6.66645H2.22266V17.8276C2.22266 18.109 2.33445 18.3789 2.53345 18.5779C2.73245 18.7769 3.00234 18.8887 3.28377 18.8887H16.7171C16.9985 18.8887 17.2684 18.7769 17.4674 18.5779C17.6664 18.3789 17.7782 18.109 17.7782 17.8276V6.66645H13.8893Z"
                                             fill="#FFFDF5"/>
                                     </svg>
-
                                 </button>
+
                                 <p className="product__btns-like" onClick={handleLike}>
                                     <svg width="38" height="37" viewBox="0 0 38 37" fill={like ? '#514A7E' : 'none'}
                                          xmlns="http://www.w3.org/2000/svg">
@@ -132,16 +133,11 @@ const Product = () => {
                                 Здесь будет какое-то неболшое описание о вещи <br/>
                                 Здесь будет какое-то неболшое описание о вещи
                             </p>
-
-
                         </div>
                     </div>
-
                     {<Review/>}
                 </div>
             </section>
         );
-    }
-;
-
+    };
 export default Product;

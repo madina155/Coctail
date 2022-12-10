@@ -49,34 +49,35 @@
       "img": [
         "../catalog/blouse/blouse2.png",
         "../catalog/blouse/blouse2_1.png",
-        "../catalog/blouse/blouse1.png",
-        "../catalog/blouse/blouse1.png"
+        "../catalog/blouse/blouse2_2.png",
+        "../catalog/blouse/blouse2_3.png",
+        "../catalog/blouse/blouse2_4.png"
       ],
       "sizes": [
         {
           "id": 1,
-          "size": 36,
-          "inStock": 0
+          "size": 38,
+          "inStock": 1
         },
         {
           "id": 2,
           "size": 39,
-          "inStock": 4
+          "inStock": 2
         },
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 5
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 3
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 0
         }
       ],
       "review": [],
@@ -97,27 +98,27 @@
         {
           "id": 1,
           "size": 38,
-          "inStock": 0
+          "inStock": 5
         },
         {
           "id": 2,
           "size": 39,
-          "inStock": 4
+          "inStock": 3
         },
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 0
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 2
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 1
         }
       ],
       "review": [],
@@ -131,14 +132,34 @@
       "img": [
         "../catalog/blouse/blouse4.png",
         "../catalog/blouse/blouse2_1.png",
-        "../catalog/blouse/blouse1.png",
+        "../catalog/blouse/blouse2_2.png",
         "../catalog/blouse/blouse1.png"
       ],
       "sizes": [
         {
           "id": 1,
           "size": 38,
+          "inStock": 4
+        },
+        {
+          "id": 2,
+          "size": 39,
+          "inStock": 5
+        },
+        {
+          "id": 3,
+          "size": 40,
           "inStock": 0
+        },
+        {
+          "id": 4,
+          "size": 41,
+          "inStock": 2
+        },
+        {
+          "id": 5,
+          "size": 42,
+          "inStock": 4
         }
       ],
       "review": [],
@@ -164,22 +185,22 @@
         {
           "id": 2,
           "size": 39,
-          "inStock": 4
+          "inStock": 5
         },
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 2
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 1
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 4
         }
       ],
       "review": [],
@@ -195,7 +216,36 @@
         "../catalog/blouse/blouse2_1.png",
         "../catalog/blouse/blouse1.png",
         "../catalog/blouse/blouse1.png"
-      ]
+      ],
+      "sizes": [
+        {
+          "id": 1,
+          "size": 38,
+          "inStock": 1
+        },
+        {
+          "id": 2,
+          "size": 39,
+          "inStock": 2
+        },
+        {
+          "id": 3,
+          "size": 40,
+          "inStock": 3
+        },
+        {
+          "id": 4,
+          "size": 41,
+          "inStock": 4
+        },
+        {
+          "id": 5,
+          "size": 42,
+          "inStock": 0
+        }
+      ],
+      "review": [],
+      "gender": "woman"
     },
     {
       "id": 7,
@@ -212,27 +262,27 @@
         {
           "id": 1,
           "size": 38,
-          "inStock": 0
+          "inStock": 5
         },
         {
           "id": 2,
           "size": 39,
-          "inStock": 4
+          "inStock": 0
         },
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 4
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 3
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 2
         }
       ],
       "review": [],
@@ -253,27 +303,27 @@
         {
           "id": 1,
           "size": 38,
-          "inStock": 0
+          "inStock": 2
         },
         {
           "id": 2,
           "size": 39,
-          "inStock": 4
+          "inStock": 1
         },
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 0
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 5
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 4
         }
       ],
       "review": [],
@@ -294,7 +344,7 @@
         {
           "id": 1,
           "size": 38,
-          "inStock": 0
+          "inStock": 3
         },
         {
           "id": 2,
@@ -304,17 +354,17 @@
         {
           "id": 3,
           "size": 40,
-          "inStock": 3
+          "inStock": 0
         },
         {
           "id": 4,
           "size": 41,
-          "inStock": 0
+          "inStock": 2
         },
         {
           "id": 5,
           "size": 42,
-          "inStock": 5
+          "inStock": 1
         }
       ],
       "review": [],
@@ -335,7 +385,7 @@
         {
           "id": 1,
           "size": 38,
-          "inStock": 0
+          "inStock": 1
         },
         {
           "id": 2,
@@ -361,6 +411,51 @@
       "review": [],
       "gender": "woman"
     }
+  ],
+  "users": [
+    {
+      "email": "muslim@mail.ru",
+      "password": "$2a$10$eK3KvJYwda7pC1HHlmfgmOoVZA7ca/nqCpoTesNwi368gf559/9j.",
+      "login": "muslim77",
+      "phone": "+996505121212",
+      "id": 1
+    },
+    {
+      "email": "madina@mail.ru",
+      "password": "$2a$10$DVZ4LzzwzKsU5D3Ycch.deVlTzApeW.u6FSVwDb9QvIU8RVWbx9Ji",
+      "login": "muslim77",
+      "phone": "+996505121212",
+      "id": 2
+    },
+    {
+      "email": "nurlanbekkyzy1881@gmaill.com",
+      "password": "$2a$10$2BeokFY6/bu0MXWxmlU0w.1y4ahwUt7jujV3/Dk5ky7pOvyCTArvm",
+      "login": "madina155",
+      "phone": "+996(243)65-76-89",
+      "location": "Bishkek",
+      "comment": "hello my friends",
+      "id": 3
+    },
+    {
+      "email": "nurlanbekkyzy1881@gmail.comil.com",
+      "password": "$2a$10$EuPPQfvLsIu8B.PLNyzcpeiFO4V57m6w5MF84035T..qccdfjtE26",
+      "login": "madina",
+      "phone": "+996(234)56-78-90",
+      "location": "Bishkek",
+      "comment": "hello my friends",
+      "id": 4
+    },
+    {
+      "email": "nurlanbekkyzy1881@gmal.comill.com",
+      "password": "$2a$10$D2n3vWh6JgSD3dE1vb0MI.iPhL6OV9KAKxK4pcFMcG/dXaKIVynLy",
+      "login": "madina155",
+      "phone": "+996(567)89-98-03",
+      "location": "Bishkek",
+      "comment": "hello my friends",
+      "id": 5
+    }
+  ],
+  "cart": [
 
   ]
 }

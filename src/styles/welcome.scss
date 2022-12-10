@@ -13,17 +13,20 @@
     }
     &-2{
       position: relative;
+      width: 50%;
+      display: flex;
+      justify-content: end;
     }
     &-img-left{
       width: 485px;
     }
-    &-img-right{
-      position: absolute;
-      right: -260px;
-      bottom: 90px;
-      width: 100%;
+    //&-img-right{
+    //  position: absolute;
+    //  right: -260px;
+    //  bottom: 90px;
+    //  width: 100%;
       //max-width: 37%;
-    }
+    //}
   }
   &__title{
     font-family: 'Roboto', sans-serif;

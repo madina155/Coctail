@@ -33,7 +33,6 @@ export const reducer = (state, action) => {
                     dataLength: state.cart.dataLength + 1
                 }
             }
-
             case 'delete_carts' :
             return {
                 ...state,
@@ -60,8 +59,6 @@ const Context = (props) => {
         data: [],
         error: ''
     })
-
-
     const [state, dispatch] = useReducer( reducer, {
         catalog: {
             gender: 'woman',
@@ -85,26 +82,18 @@ const Context = (props) => {
             dataLength: 0,
         }
     }, init)
-
-
     const setProductForFavorites = (id) => {
         dispatch({type: 'set_favorites', payload: id})
     }
-
     const deleteProductForFavorites = (id) => {
         dispatch({type: 'delete_favorites', payload: id})
     }
-
     const setProductForCarts = (id) => {
         dispatch({type: 'set_carts', payload: id})
     }
-
     const deleteProductForCart = (id) => {
         dispatch({type: 'delete_carts', payload: id})
     }
-
-
-
     const value = {
         state, dispatch,
         accordion, setAccordion,

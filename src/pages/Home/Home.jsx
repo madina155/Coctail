@@ -1,7 +1,7 @@
 import React from 'react';
 import Welcome from "./Welcome/Welcome";
 import Choose from "./Choose/Choose";
-// import Shopping from "./Shopping/Shopping";
+import Shopping from "./Shopping/Shopping";
 import Review from "./Review/Review";
 import Questions from "./Questions/Questions";
 import Cooperation from "./Cooperation/Cooperation";
@@ -12,7 +12,7 @@ const Home = () => {
         <main>
             <Welcome/>
             <Choose/>
-            {/*<Shopping/>*/}
+            <Shopping/>
             <Review/>
             <Questions/>
             <Cooperation/>

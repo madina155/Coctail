@@ -12,10 +12,10 @@ import Cooperation from "./pages/Home/Cooperation/Cooperation";
 import Invite from "./pages/Home/Invite/Invite";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
-// import {useSelector} from "react-redux";
-
-import "./styles/style.scss"
 import Popup from "./pages/Popup/Popup";
+import Table from "./pages/Table/Table";
+import "./styles/style.scss"
+
 
 
 
@@ -32,21 +32,21 @@ function App() {
           <Routes>
               <Route path={'/'} element={<Layout/>}>
                   <Route path={''} element={<Home/>}/>
-                  <Route path={'/catalog'} element={<Catalog/>}/>
-                  <Route path={'/shop'} element={<Shop/>}/>
-                  <Route path={'/review'} element={<Review/>}/>
-                  <Route path={'/questions'} element={<Questions/>}/>
+                  <Route path={'catalog'} element={<Catalog/>}/>
+                  <Route path={'shop'} element={<Shop/>}/>
+                  <Route path={'review'} element={<Review/>}/>
+                  <Route path={'questions'} element={<Questions/>}/>
                   <Route path={'catalog/:id'} element={<Product/>}/>
-                  <Route path={'/favorites'} element={<Favorites/>}/>
-                  <Route path={'/cooperation'} element={<Cooperation/>}/>
-                  <Route path={'/invite'} element={<Invite/>}/>
-                  <Route path={'/cart'} element={<Cart/>}/>
-                  <Route path={'/login'} element={Login}/>
-                  <Route path={'/registration'} element={Registration}/>
+                  <Route path={'favorites'} element={<Favorites/>}/>
+                  <Route path={'cooperation'} element={<Cooperation/>}/>
+                  <Route path={'invite'} element={<Invite/>}/>
+                  <Route path={'cart'} element={<Cart/>}/>
+                  <Route path={'table'} element={<Table/>}/>
 
               </Route>
-              <Route path={'/popup'} element={Popup}/>
-
+              <Route path={'popup'} element={<Popup/>}/>
+              <Route path={'login'} element={<Login/>}/>
+              <Route path={'registration'} element={<Registration/>}/>
 
 
           </Routes>
