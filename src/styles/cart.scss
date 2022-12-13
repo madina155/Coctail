@@ -6,7 +6,11 @@
     display: flex;
     align-items: center;
     padding-bottom: 60px;
+    &-top{
+      column-gap: 50px;
+      display: flex;
 
+    }
     &-link{
       padding: 19px 14px;
 
@@ -16,14 +20,21 @@
       align-items: center;
       justify-content: center;
     }
-  }
-  &__title{
-    display: flex;
-    padding: 0 12px 0 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    color: #121212;
+    &-titles {
+      display: flex;
+      column-gap: 12px;
+      align-items: baseline;
+    }
+    &-title{
+      padding: 0 12px 0 50px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 40px;
+      color: #121212;
+    }
+    &-icon{
+      display: flex;
 
+    }
   }
 }

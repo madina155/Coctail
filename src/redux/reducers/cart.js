@@ -1,24 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-import axios from "../../utils/axios";
-// export const setCart = createAsyncThunk(
-//     'cart/getCart',
-//     async (filter, rejectWithValue) => {
-//         try {
-//
-//             const res = await axios.post(`/cart`)
-//             if (res.statusText !== 'OK') {
-//                 throw new Error('Server error !')
-//             }
-//             return res.data
-//         } catch (err) {
-//             return rejectWithValue(err.message)
-//         }
-//     }
-
-
-
-// )
 const cart =  createSlice({
 
     name: 'cart',
@@ -28,12 +9,16 @@ const cart =  createSlice({
     },
     reducers: {
         addCart: (state, action) => {
-            state.data = [...state.data, action.payload]
-            state.dataLength += 1
+            const itemCart = state.data.find((item) => item.id === action.payload.id)
+            if(itemCart){
+                itemCart.count++
+            } else {
+                state.data.push({ ...action.payload, count: 1})
+            }
         },
         removeCart: (state, action) => {
-            state.data = [...state.data, action.payload]
-            state.dataLength -= 1
+            const removeCart = state.data.filter((item) => item.id !== action.payload);
+            state.data = removeCart;
         },
 
     },

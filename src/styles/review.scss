@@ -1,9 +1,9 @@
 .review{
   padding-bottom: 150px;
   position: relative;
-  .circle{
+  &__circle{
     position: absolute;
-    bottom: 0;
+    bottom: -150px;
     right: 0;
   }
   .review__title{
