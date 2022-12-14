@@ -1,6 +1,5 @@
-.shopping {
-  //padding: 30px 30px;
-  position: relative;
+.shopping{
+  padding-bottom: 85px;
   &__col{
     margin-top: 60px;
 
@@ -20,6 +19,16 @@
     font-size: 40px;
     padding-left: 265px;
     color: #514A7E;
+  }
+  &__btm{
+    &-right{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_icons{
+    display: flex;
+    column-gap: 15px;
   }
 }
 

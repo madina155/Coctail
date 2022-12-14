@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
+import cartImg from "../../assets/blouse01.png"
 
 
 const Cart = () => {
     const {status, data, dataLength} = useSelector((store) => store.cart)
 
-
+    console.log(data)
     console.log(dataLength)
 
     if (status === 'loading') {
@@ -43,14 +44,15 @@ const Cart = () => {
                     <div className="cart_row">
                         <div className="cart__col">
                             <div className="cart__col-right">
-                                {/*<img src={item.image && item.image[0]} alt="product" className="cart__img"/>*/}
+                                <img src={item.img[0]} alt="product" className="cart__img"/>
+
                             </div>
                             <div className="cart__col-left">
                                 <div className="cart__col-titles">
                                     <p className="cart__col-title">{item.title}</p>
                                     <p className="cart__col-art">Арт 09456784</p>
                                 </div>
-                                {/*<p className="cart__col-size">{item.size}</p>*/}
+                                <p className="cart__col-size"></p>
                             </div>
                         </div>
                         <div className="cart__col">

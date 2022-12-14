@@ -14,6 +14,8 @@ import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import Popup from "./pages/Popup/Popup";
 import Table from "./pages/Table/Table";
+import Processing from "./pages/Processing/Processing";
+
 import "./styles/style.scss"
 
 
@@ -47,7 +49,7 @@ function App() {
               <Route path={'popup'} element={<Popup/>}/>
               <Route path={'login'} element={<Login/>}/>
               <Route path={'registration'} element={<Registration/>}/>
-
+              <Route path={'processing'} element={<Processing/>}/>
 
           </Routes>
       </div>

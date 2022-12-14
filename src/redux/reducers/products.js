@@ -24,7 +24,8 @@ const productsSlice = createSlice({
         data: [],
         dataLength: 0,
         filter: {
-            size: ''
+            size: '',
+            price: ''
         },
         favorites: [],
         cart: [],
@@ -35,6 +36,9 @@ const productsSlice = createSlice({
 
         changeSizes: (state , action) => {
             state.filter.size = action.payload
+        },
+        changePrices: (state, action) => {
+            state.filter.price = action.payload
         },
 
         setFavoritesProduct: (state , action) => {
@@ -78,7 +82,7 @@ const productsSlice = createSlice({
     }
 })
 
-export const {setFavoritesProduct, removeFavoritesProduct, setCartProduct, removeCartProduct, changeSizes} = productsSlice.actions
+export const {setFavoritesProduct, removeFavoritesProduct, setCartProduct, removeCartProduct, changeSizes, changePrices} = productsSlice.actions
 
 export default productsSlice.reducer
 

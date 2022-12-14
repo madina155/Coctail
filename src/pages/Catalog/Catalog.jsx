@@ -10,7 +10,7 @@ import CatalogSize from "./CatalogFilter/CatalogSize";
 const Catalog = () => {
 
     const dispatch = useDispatch()
-    const {status, error, data, filter} = useSelector((store) => store.products)
+    const {status, data, filter} = useSelector((store) => store.products)
 
     useEffect(() => {
         dispatch(getProducts())
@@ -38,6 +38,7 @@ const Catalog = () => {
                         <div className="catalog__scroll-line"></div>
                         <div className="catalog__filter">
                             <CatalogSize/>
+
                         </div>
                     </div>
                     <div className="catalog__left">

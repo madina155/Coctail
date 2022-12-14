@@ -4,16 +4,16 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import {changeSizes} from "../../../redux/reducers/products"
+import {changePrices} from "../../../redux/reducers/products"
 import {useDispatch} from "react-redux";
 
 
-const CatalogSize = () => {
+const CatalogPrice = () => {
     const dispatch = useDispatch();
-    const [sizesState, setSizesState] = useState('')
+    const [pricesState, setPricesState] = useState('')
     useEffect(() => {
-        dispatch(changeSizes(sizesState))
-    }, [sizesState])
+        dispatch(changePrices(pricesState))
+    }, [pricesState])
     return (
         <Box className="catalog__filter-box" sx={{minWidth: 100}}>
             <FormControl fullWidth>
@@ -21,9 +21,9 @@ const CatalogSize = () => {
                 <Select style={{color: '#121212'}}
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        value={sizesState}
+                        value={pricesState}
                         label="fasf"
-                        onChange={(e) => setSizesState(e.target.value)}
+                        onChange={(e) => setPricesState(e.target.value)}
                 >
                     <MenuItem className="catalog__filter-item" value="">По умолчанию</MenuItem>
                     <MenuItem className="catalog__filter-item" value={38}>38</MenuItem>
@@ -33,12 +33,10 @@ const CatalogSize = () => {
                     <MenuItem className="catalog__filter-item" value={43}>43</MenuItem>
                     <MenuItem className="catalog__filter-item" value={44}>44</MenuItem>
                     <MenuItem className="catalog__filter-item" value={45}>45</MenuItem>
-
-
                 </Select>
             </FormControl>
         </Box>
     );
 };
 
-export default CatalogSize;
+export default CatalogPrice;

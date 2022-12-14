@@ -14,6 +14,7 @@
     position: relative;
 
   }
+
   &__right{
     //position: relative;
     display: flex;
@@ -111,6 +112,47 @@
   &__icons{
     display: flex;
     column-gap: 17px;
+    //position: relative;
+    &-link-admin{
+      cursor: pointer;
+    //  .header__show{
+    //    //&::before{
+    //    //  content: '';
+    //    //  width: 15px;
+    //    //  height: 15px;
+    //    //  background: aqua;
+    //    //  position: absolute;
+    //    //}
+    //    min-width: 210px;
+    //    min-height: 240px;
+    //    position: absolute;
+    //    display: block;
+    //    z-index: 99;
+    //    top: 35px;
+    //    right: -2px;
+    //    background: #FFFDF5;
+    //    box-shadow: 0 4px 20px rgba(51, 51, 51, 0.05);
+    //    transition: 0.5s;
+    //    &-top{
+    //      text-align: center;
+    //      padding-top: 18px;
+    //    }
+    //    &-bottom{
+    //      padding-left: 24px;
+    //    }
+    //    &-btn{
+    //      padding: 8px 34px 9px 35px;
+    //      margin: 15px 0;
+    //      border: none;
+    //      background: #514A7E;
+    //      &-text{
+    //        font-family: 'Roboto', sans-serif;
+    //        font-weight: 400;
+    //        font-size: 14px;
+    //        color: #FFFDF5;
+    //      }
+    //    }
+    //  }
+    }
   }
-
 }

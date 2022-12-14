@@ -1,6 +1,9 @@
 .cart{
   padding: 0 0 119px;
-
+  &__img{
+    width: 178px;
+    height: 165px;
+  }
 
   &__back{
     display: flex;

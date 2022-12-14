@@ -17,6 +17,8 @@ const Product = () => {
         const {favorites} = useSelector((store) => store.products);
         const [like, setLike] = useState(favorites.find(el => el.id == params.id) ?? false);
 
+        const [size, setSize] = useState('')
+
         // const {cart} = useSelector((store) => store.product);
         // const [selected, setSelected] = useState(cart.find(el => el.id === params.id) ?? false);
 
@@ -63,28 +65,22 @@ const Product = () => {
                             <p className="product__price">{product.price + " руб."}</p>
                             <p className="product__text">Размер</p>
                             <div className="product__prices">
-                                <button className="product__prices-btn">
-                                    <p className="product__btn-text">S</p>
-                                    <p className="product__btn-size">42</p>
-                                </button>
-                                <button className="product__prices-btn">
-                                    <p className="product__btn-text">M</p>
-                                    <p className="product__btn-size">44</p>
-                                </button>
-                                <button className="product__prices-btn">
-                                    <p className="product__btn-text">L</p>
-                                    <p className="product__btn-size">46</p>
-                                </button>
-                                <button className="product__prices-btn">
-                                    <p className="product__btn-text">XL</p>
-                                    <p className="product__btn-size">48</p>
-                                </button>
+                                {
+                                    product.sizes && product.sizes.filter((item) => {
+                                        return item.inStock
+                                    }).map((item) => (
+                                        <button  className={`product__prices-btn ${item.size === size ? 'active' : ''}`} onClick={() => setSize(item.size)}>
+                                            <p className="product__btn-size">{item.size}</p>
+                                        </button>
+                                    ))
+                                }
                             </div>
                             <Link to={'table'} className="product__link" href="">Таблица размеров</Link>
                             <div className="product__btns">
-                                <button className="product__btns-cart" onClick={() => dispatch(addCart(product
-
-                                )) }>В корзину
+                                <button className="product__btns-cart" onClick={() => dispatch(addCart({
+                                    ...product,
+                                    size: size
+                                })) }>В корзину
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
