@@ -15,20 +15,15 @@ import Registration from "./pages/Registration/Registration";
 import Popup from "./pages/Popup/Popup";
 import Table from "./pages/Table/Table";
 import Processing from "./pages/Processing/Processing";
+import RightUl from "./components/RightUl/RightUl";
+import HeaderRight from "./components/HeaderRight/HeaderRight";
+import Bonus from "./pages/Bonus/Bonus";
+
 
 import "./styles/style.scss"
 
 
-
-
 function App() {
-    //
-    // const users = useSelector((s) => s.users.users)
-    // const usersCount = useSelector((s) => s.users.usersCount)
-    //
-    // console.log(users)
-    // console.log(usersCount)
-
   return (
       <div className="App">
           <Routes>
@@ -46,6 +41,9 @@ function App() {
                   <Route path={'table'} element={<Table/>}/>
 
               </Route>
+              <Route path={'headerRight'} element={<HeaderRight/>}/>
+              <Route path={'bonus'} element={<Bonus/>}/>
+              <Route path={'rightUl'} element={<RightUl/>}/>
               <Route path={'popup'} element={<Popup/>}/>
               <Route path={'login'} element={<Login/>}/>
               <Route path={'registration'} element={<Registration/>}/>
@@ -53,7 +51,6 @@ function App() {
 
           </Routes>
       </div>
-
   );
 }
 

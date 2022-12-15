@@ -46,12 +46,12 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
         }
-
       ],
       "review": [],
       "gender": "woman"
@@ -95,15 +95,16 @@
           "inStock": 0
         },
         {
-        "id": 6,
-        "size": 43,
-        "inStock": 6
+          "id": 6,
+          "size": 43,
+          "inStock": 6
         },
         {
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -158,7 +159,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -213,7 +215,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -268,7 +271,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -323,7 +327,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 5
@@ -378,7 +383,8 @@
           "id": 7,
           "size": 44,
           "inStock": 1
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -433,7 +439,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -488,7 +495,8 @@
           "id": 7,
           "size": 44,
           "inStock": 7
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 2
@@ -543,7 +551,8 @@
           "id": 7,
           "size": 44,
           "inStock": 2
-        }, {
+        },
+        {
           "id": 8,
           "size": 45,
           "inStock": 8
@@ -594,9 +603,14 @@
       "location": "Bishkek",
       "comment": "hello my friends",
       "id": 5
+    },
+    {
+      "email": "madina122@mail.ru",
+      "password": "$2a$10$7JZaSZTsTqUA/P/DRDcZZuEGekbftnAXGUOTdst39rrtX0FFO8k5G",
+      "login": "m77",
+      "phone": "+996505121212",
+      "id": 6
     }
   ],
-  "cart": [
-
-  ]
+  "cart": []
 }

@@ -59,10 +59,7 @@ const Catalog = () => {
                                 </div>
 
                                 : <h2>error</h2>
-
                         }
-
-
                     </div>
                 </div>
             </div>

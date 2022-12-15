@@ -1,23 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import menuCircle from "../../assets/circle-header-menu.png"
+import {useDispatch} from "react-redux";
 
 
 const Header = () => {
-    // const [log, setLog] = useState(false)
+    const dispatch = useDispatch()
 
     return (
         <header className="header">
             <div className="container">
                 <nav className="header__nav">
                     <div className="header__menu">
-                        <Link href="" className="header__menu-link">
+                        <a href="" className="header__menu-link">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M32 29H4C3.73478 29 3.48043 28.8946 3.29289 28.7071C3.10536 28.5196 3 28.2652 3 28C3 27.7348 3.10536 27.4804 3.29289 27.2929C3.48043 27.1054 3.73478 27 4 27H32C32.2652 27 32.5196 27.1054 32.7071 27.2929C32.8946 27.4804 33 27.7348 33 28C33 28.2652 32.8946 28.5196 32.7071 28.7071C32.5196 28.8946 32.2652 29 32 29Z" fill="#121212"/>
                                 <path d="M32 19H4C3.73478 19 3.48043 18.8946 3.29289 18.7071C3.10536 18.5196 3 18.2652 3 18C3 17.7348 3.10536 17.4804 3.29289 17.2929C3.48043 17.1054 3.73478 17 4 17H32C32.2652 17 32.5196 17.1054 32.7071 17.2929C32.8946 17.4804 33 17.7348 33 18C33 18.2652 32.8946 18.5196 32.7071 18.7071C32.5196 18.8946 32.2652 19 32 19Z" fill="#121212"/>
                                 <path d="M32 9H4C3.73478 9 3.48043 8.89464 3.29289 8.70711C3.10536 8.51957 3 8.26522 3 8C3 7.73478 3.10536 7.48043 3.29289 7.29289C3.48043 7.10536 3.73478 7 4 7H32C32.2652 7 32.5196 7.10536 32.7071 7.29289C32.8946 7.48043 33 7.73478 33 8C33 8.26522 32.8946 8.51957 32.7071 8.70711C32.5196 8.89464 32.2652 9 32 9Z" fill="#121212"/>
                             </svg>
-                        </Link>
+                        </a>
                     </div>
 
                     <div className="header__menus">
@@ -37,7 +38,6 @@ const Header = () => {
                         </div>
                     </div>
 
-
                     <div className="header__right">
                         <label className="header__search" htmlFor="">
                             <a href="" className="header__search-icon">
@@ -48,10 +48,6 @@ const Header = () => {
                             </a>
                             <input placeholder="Поиск" type="text" className="header__search-field"/>
                         </label>
-                        {/*<div className="header__lang">*/}
-                        {/*    <p className={`header__lang-link ${i18n.language === 'ru' ? 'active' : ''}`} onClick={() => changeLanguage('ru')}>RU</p>*/}
-                        {/*    <p className={`header__lang-link ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => changeLanguage('en')}>EN</p>*/}
-                        {/*</div>*/}
 
                         <div className="header__icons">
                             <div className="header__icons-link-admin">
@@ -93,13 +89,12 @@ const Header = () => {
                                         <p className="favorites__cart">Корзина</p>
                                         {/*<p className="favorites__cart-see">2</p>*/}
                                     </li>
-                                    {/*<div className="favorites__line"></div>*/}
                                     <li className="favorites__item">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.0007 18.0167C9.87799 18.0163 9.75882 17.9753 9.66185 17.9C6.57296 15.5 4.44519 13.4333 2.9563 11.3944C1.0563 8.78889 0.622962 6.38334 1.66741 4.24445C2.41185 2.71667 4.55074 1.46667 7.05074 2.19445C8.24271 2.53875 9.28268 3.27711 10.0007 4.28889C10.7188 3.27711 11.7588 2.53875 12.9507 2.19445C15.4452 1.47778 17.5896 2.71667 18.3341 4.24445C19.3785 6.38334 18.9452 8.78889 17.0452 11.3944C15.5563 13.4333 13.4285 15.5 10.3396 17.9C10.2427 17.9753 10.1235 18.0163 10.0007 18.0167ZM5.62852 3.1C5.03366 3.07685 4.44373 3.21614 3.92204 3.50292C3.40036 3.7897 2.96663 4.21314 2.66741 4.72778C1.8063 6.49445 2.19518 8.46111 3.8563 10.7333C5.62161 13.0103 7.68875 15.0363 10.0007 16.7556C12.3124 15.038 14.3795 13.0139 16.1452 10.7389C17.8119 8.46112 18.1952 6.49445 17.3341 4.73334C16.7785 3.62223 15.1119 2.73889 13.2563 3.26112C12.6613 3.43695 12.1097 3.7354 11.6371 4.13727C11.1644 4.53913 10.7811 5.03551 10.5119 5.59445C10.47 5.69634 10.3988 5.7835 10.3073 5.84483C10.2158 5.90616 10.1081 5.93891 9.99796 5.93891C9.88781 5.93891 9.78014 5.90616 9.68864 5.84483C9.59713 5.7835 9.52593 5.69634 9.48407 5.59445C9.21684 5.03411 8.8342 4.53658 8.36124 4.13446C7.88827 3.73234 7.33566 3.43473 6.73963 3.26112C6.37851 3.15623 6.00456 3.10201 5.62852 3.1Z" fill="#7D7D7D"/>
                                         </svg>
                                         <p className="favorites__cart">Избранное</p>
-                                        <p className="favorites__like-see"></p>
+                                        <p className="favorites__like-see">4</p>
                                     </li>
                                     <li className="favorites__item">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,6 +118,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
+
                 </nav>
             </div>
         </header>

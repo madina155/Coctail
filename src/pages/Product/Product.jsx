@@ -2,11 +2,10 @@ import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux";
 import {getOneProduct} from "../../redux/reducers/oneProduct";
-import {setFavoritesProduct, removeFavoritesProduct, setCartProduct, removeCartProduct} from "../../redux/reducers/products";
 import {CustomContext} from "../../utils/context";
-import {store} from "../../redux";
 import Review from "../Home/Review/Review";
 import {addCart} from "../../redux/reducers/cart";
+import {addFavorites} from "../../redux/reducers/favorites";
 import {Link} from "react-router-dom"
 
 const Product = () => {
@@ -14,29 +13,10 @@ const Product = () => {
         const {state} = useContext(CustomContext)
         const params = useParams();
         const {status, error, product} = useSelector((store) => store.oneProduct);
-        const {favorites} = useSelector((store) => store.products);
-        const [like, setLike] = useState(favorites.find(el => el.id == params.id) ?? false);
-
-        const [size, setSize] = useState('')
-
-        // const {cart} = useSelector((store) => store.product);
-        // const [selected, setSelected] = useState(cart.find(el => el.id === params.id) ?? false);
-
+        const [size, setSize] = useState(42)
         useEffect(() => {
             dispatch(getOneProduct(params.id))
         }, []);
-
-        const handleLike = () => {
-            if (like) {
-               dispatch( removeFavoritesProduct(product.id))
-                setLike(false)
-            } else {
-                dispatch(setFavoritesProduct(product.id))
-                setLike(true)
-            }
-        }
-
-
 
     if (status === 'loading') {
         return '...loading'
@@ -75,7 +55,7 @@ const Product = () => {
                                     ))
                                 }
                             </div>
-                            <Link to={'table'} className="product__link" href="">Таблица размеров</Link>
+                            <Link to={'/table'} className="product__link" href="">Таблица размеров</Link>
                             <div className="product__btns">
                                 <button className="product__btns-cart" onClick={() => dispatch(addCart({
                                     ...product,
@@ -89,8 +69,11 @@ const Product = () => {
                                     </svg>
                                 </button>
 
-                                <p className="product__btns-like" onClick={handleLike}>
-                                    <svg width="38" height="37" viewBox="0 0 38 37" fill={like ? '#514A7E' : 'none'}
+                                <p className="product__btns-like" onClick={() => dispatch(addFavorites({
+                                    ...product,
+                                    size: size
+                                }))}>
+                                    <svg width="38" height="37" viewBox="0 0 38 37" fill={addFavorites() ? '#514A7E' : 'none'}
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M18.7797 33.3306C18.5526 33.3299 18.3321 33.254 18.1527 33.1147C12.4383 28.6747 8.50191 24.8514 5.74747 21.0795C2.23247 16.2592 1.4308 11.8089 3.36302 7.85197C4.74025 5.02558 8.69719 2.71308 13.3222 4.05947C15.5273 4.69643 17.4513 6.06239 18.7797 7.93419C20.1081 6.06239 22.0321 4.69643 24.2372 4.05947C28.8519 2.73364 32.8191 5.02558 34.1964 7.85197C36.1286 11.8089 35.3269 16.2592 31.8119 21.0795C29.0575 24.8514 25.1211 28.6747 19.4066 33.1147C19.2272 33.254 19.0068 33.3299 18.7797 33.3306ZM10.6911 5.73475C9.59059 5.69192 8.49921 5.9496 7.5341 6.48014C6.56899 7.01068 5.76659 7.79405 5.21302 8.74614C3.61997 12.0145 4.33941 15.6528 7.41247 19.8564C10.6783 24.0688 14.5025 27.817 18.7797 30.9975C23.0562 27.8201 26.8804 24.0755 30.1469 19.8667C33.2303 15.6528 33.9394 12.0145 32.3464 8.75642C31.3186 6.70086 28.2353 5.06669 24.8025 6.03281C23.7018 6.3581 22.6814 6.91024 21.8069 7.65369C20.9325 8.39714 20.2234 9.31543 19.7252 10.3495C19.6478 10.538 19.5161 10.6992 19.3468 10.8127C19.1775 10.9261 18.9783 10.9867 18.7746 10.9867C18.5708 10.9867 18.3716 10.9261 18.2023 10.8127C18.033 10.6992 17.9013 10.538 17.8239 10.3495C17.3295 9.31285 16.6216 8.39241 15.7466 7.64849C14.8716 6.90458 13.8493 6.35398 12.7466 6.03281C12.0786 5.83876 11.3868 5.73845 10.6911 5.73475Z"
@@ -121,8 +104,8 @@ const Product = () => {
 
                             </div>
                             <div className="product__reviews">
-                                <a href="">Смотреть все отзывы</a>
-                                <a href="">Добавить отзыв</a>
+                                <a className="links" href="">Смотреть все отзывы</a>
+                                <a className="links" href="">Добавить отзыв</a>
                             </div>
                             <p className="product__description">Описание</p>
                             <p className="product__desc">

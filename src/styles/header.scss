@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    //position: relative;
 
   }
 
   &__right{
-    //position: relative;
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: 40px;
@@ -25,13 +25,6 @@
   }
   &__right:hover{
     .header__show{
-      //&::before{
-      //  content: '';
-      //  width: 15px;
-      //  height: 15px;
-      //  background: aqua;
-      //  position: absolute;
-      //}
       min-width: 210px;
       min-height: 240px;
       position: absolute;

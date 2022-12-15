@@ -49,7 +49,7 @@
     font-size: 14px;
     color: #121212;
   }
-  &__btm-right, &__btm-left{
+  &__btm-right{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +59,7 @@
   &__btm-left{
     display: flex;
     justify-content: space-between;
-
+    lign-items: end;
   }
 
   &__text{
@@ -76,7 +76,8 @@
     align-items: center;
     column-gap: 12px;
     padding-bottom: 15px;
-
+    cursor: pointer;
+    text-decoration: none;
   }
   &__icons{
     display: flex;

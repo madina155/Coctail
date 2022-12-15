@@ -25,7 +25,8 @@ const productsSlice = createSlice({
         dataLength: 0,
         filter: {
             size: '',
-            price: ''
+            price: '',
+            search: ''
         },
         favorites: [],
         cart: [],
@@ -40,30 +41,15 @@ const productsSlice = createSlice({
         changePrices: (state, action) => {
             state.filter.price = action.payload
         },
-
-        setFavoritesProduct: (state , action) => {
-            state.favorites = [...state.favorites, state.data.find(el => el.id === action.payload)];
-        },
-        removeFavoritesProduct: (state , action) => {
-            state.favorites = state.favorites.filter(el=> el.id !== action.payload)
-        },
-
-
-         setCartProduct : (state , action) => {
-            state.cart = [...state.cart, state.data.find(el => el.id === action.payload)];
-         },
-
-        removeCartProduct: (state , action) => {
-            state.cart = state.cart.filter(el=> el.id !== action.payload)
-        },
-
-
+        changeSearch: (state, action) => {
+            state.filter.search = action.payload
+        }
 
     },
 
 
     extraReducers: {
-        [getProducts.pending] : (state ,action) => {
+        [getProducts.pending] : (state ) => {
             state.status = 'loading'
             state.error = ''
         },
@@ -82,7 +68,7 @@ const productsSlice = createSlice({
     }
 })
 
-export const {setFavoritesProduct, removeFavoritesProduct, setCartProduct, removeCartProduct, changeSizes, changePrices} = productsSlice.actions
+export const {changeSizes, changePrices, changeSearch} = productsSlice.actions
 
 export default productsSlice.reducer
 

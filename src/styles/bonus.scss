@@ -1,0 +1,25 @@
+.bonus{
+  padding: 42px 0 69px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #121212;
+  }
+  &__row{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col{
+    width: 20%;
+  }
+  &__num-title{
+    
+  }
+}

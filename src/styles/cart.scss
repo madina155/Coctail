@@ -2,9 +2,76 @@
   padding: 0 0 119px;
   &__img{
     width: 178px;
-    height: 165px;
   }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__col{
+    display: flex;
+    &-titles{
+      display: flex;
+      column-gap: 14px;
+      align-items: center;
+    }
+    &-title{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #121212;
+    }
+    &-art{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #7D7D7D;
+    }
+    &-size{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #7D7D7D;
+      margin: 29px 0 25px;
+    }
+    &-count{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #514A7E;
+      margin-bottom: 50px;
+    }
+    &-btm{
+      display: flex;
+      column-gap: 64px;
+    }
 
+    &-link{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #514A7E;
+    }
+  }
+  &__prises{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #121212;
+    margin-bottom: 30px;
+  }
+  &__price{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #514A7E;
+    margin-bottom: 33px;
+  }
+  &__like, &__carts{
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+  }
   &__back{
     display: flex;
     align-items: center;
